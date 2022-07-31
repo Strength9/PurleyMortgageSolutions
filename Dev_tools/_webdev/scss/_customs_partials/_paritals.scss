@@ -1,0 +1,135 @@
+.ps_left { text-align:left;}
+.ps_right { text-align:right; margin-right:0;}
+.ps_center { text-align:center; }
+
+
+	
+/* Links */
+
+
+
+
+
+.wcp-columns {
+	    margin:0 auto;
+	    max-width: $contentwidth;
+		width:90%;
+		display: grid; 
+	    grid-template-columns: 1fr; 
+		grid-auto-rows: auto;
+	    gap: 30px 30px; 
+		background-position: center top;
+		
+		background-repeat:no-repeat;
+		//border:  1px dashed red;
+		
+		
+		>div {
+			box-sizing:border-box;
+			//border:  1px dashed red;
+		}
+		
+		@media only screen and (min-width:800px) {
+			grid-template-columns: 1fr 1fr; 
+			grid-template-rows: minmax(10px auto); 
+			gap: 0px 30px; 
+		}
+	   
+	.wcp-column {
+		
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-content: stretch;
+		align-items: center;
+		background-position: center center;
+		background-size: contain;
+		background-repeat:no-repeat;
+		
+		&.t_l {	
+			justify-content: flex-start;
+			align-content: flex-start;
+			align-items: flex-start;
+			text-align:left;
+				.titletext,.titlebar {
+					margin-left:0;
+				}
+		}
+		&.t_c {
+			justify-content: flex-start;
+			align-content: flex-start;
+			align-items: center;
+			text-align:center;
+			
+		} 
+		&.t_r {
+			justify-content: flex-start;
+			align-content: flex-start;
+			align-items: flex-end;
+			text-align: right;
+			
+				.titletext,.titlebar {
+					margin-right:0;
+				}
+		}
+		&.c_l {
+			justify-content: center;
+			align-content: flex-start;
+			align-items: flex-start;
+			text-align:left;
+			.titletext,.titlebar {
+				margin-left:0;
+			}
+		}
+		&.c_c {
+			justify-content: center;
+			align-content: flex-start;
+			align-items: center;
+			text-align:center;
+		}
+		&.c_r {
+			justify-content: center;
+			align-content: flex-start;
+			align-items: flex-end;
+			text-align: right;
+			
+			.titletext,.titlebar {
+				margin-right:0;
+			}
+		}
+		&.b_l {	
+			justify-content: flex-end;
+			align-content: flex-start;
+			align-items: flex-start;
+			text-align:left;
+			
+			.titletext,.titlebar {
+				margin-left:0;
+			}
+		}
+		&.b_c {
+			justify-content: flex-end;
+			align-content: flex-start;
+			align-items: center;
+			text-align:center;
+		} 
+		&.b_r {
+			justify-content: flex-end;
+			align-content:  flex-start;
+			align-items: flex-end;
+			text-align: right;
+			
+			.titletext,.titlebar {
+				margin-right:0;
+			}
+		}
+		
+		&.full {
+			grid-column: 1 /  span 2;
+		}
+
+			
+	}
+}
+

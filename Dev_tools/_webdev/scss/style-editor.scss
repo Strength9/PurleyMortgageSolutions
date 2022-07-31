@@ -1,0 +1,33 @@
+@import '_global';
+
+/* Admin Fixes For Dashboard */
+body.admin-bar #branding-wrap{top: 28px;} 
+body.admin-bar #wrapper{margin-top: 145px;}
+body.logged-in .wrap.woocomerce .mainform {margin-top: 145px;}
+
+// Make the edit screen full width
+.wp-block { padding:0 50px; max-width:none;  }
+ 
+@import '_global';
+
+    @import '_design_styles/fonts';  
+    @import 'fontawesome/_fontawesome';
+    @import 'fontawesome/_brands'; 
+    @import '_design_styles/base';     
+    @import '_design_styles/animated';     
+    @import '_page_structure/header';      
+    @import '_page_structure/footer';  
+   @import '_customs_partials/paritals'; // Global Designs
+   
+    
+.fade-in {
+  opacity: 0;
+  transform: translateY(100px);
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+#tinymce {
+  padding-top:0 !important;
+}
