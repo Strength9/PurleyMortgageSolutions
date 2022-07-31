@@ -2,7 +2,7 @@
 
 define( 'xray_VERSION', 1.0 ); // Define the version so we can easily replace it throughout the theme
 
-$SiteName = 'Site';
+$SiteName = 'PMS';
 $settingslink = 'site-settings';
 /*-----------------------------------------------------------------------------------*/
 /* Remove the auto p tag removal
