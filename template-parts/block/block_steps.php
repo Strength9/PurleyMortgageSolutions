@@ -6,7 +6,7 @@ Post Types: post, page, custom-type
 Block SVG: block_template.svg
 Block Category: s9blocks
 */
-$sectionclass = 'cblock';
+$sectionclass = 'journeysteps';
 /* --------------------------------------------------------------------------- */
 if( !empty( $block['data']['_is_preview'] ) ) {
 		echo' <img src="'.get_stylesheet_directory_uri().'/template-parts/previews/block_template.png" alt="Title Field">';
@@ -20,7 +20,7 @@ include('______partials_global.php');
 
 
 
-$section_title = ! empty( get_field('section_title') ) ? get_field('section_title') : '';
+$section_title = ! empty( get_field('section_title') ) ? '<h1>'.get_field('section_title').'</h1>' : '';
 $linkrepeat = '';
 if( get_field('steps') ):
 	while( the_repeater_field('steps') ):
@@ -32,7 +32,7 @@ if( get_field('steps') ):
 			$imageclass = ' class="'.$glob_imageclass.'"'; //''; //
 			$imageurl = ! empty($imagefield['url'] ) ? $imagefield['url'] : get_field('default_holding_image','options');
 			$imagealt = ! empty( $imagefield['alt'] ) ? ' alt="'.$imagefield['alt'].'"' : '';
-			$imagerp = '<img src="'.$imageurl.'"'.$imagealt.$imageclass.'/>';
+			$imagerp = $imageurl;
 		} else  { 
 			$imagerp= '';
 		};
@@ -41,9 +41,9 @@ if( get_field('steps') ):
 $background_colour= ! empty( get_sub_field('background_colour') ) ? get_sub_field('background_colour') : '';
 
 		
-$number_repeater= ! empty( get_sub_field('number_repeater') ) ? get_sub_field('number_repeater') : '';
-			$text_repeater= ! empty( get_sub_field('text_repeater') ) ? get_sub_field('text_repeater') : '';
-			$linkrepeat.= $number_repeater.$text_repeater.$background_colour.$imagerp ;
+			$number_repeater= ! empty( get_sub_field('number_repeater') ) ? '<h3>'.get_sub_field('number_repeater').'</h3>' : '';
+			$text_repeater= ! empty( get_sub_field('text_repeater') ) ? '<div class="text">'.$number_repeater.get_sub_field('text_repeater').'</div>' : '';
+			$linkrepeat.= '<div class="step" style="background-image:url('.$imagerp.');">'.$text_repeater.'<div class="overlay '.$background_colour.'"></div></div>' ;
 	endwhile; 
 endif;
 
@@ -55,9 +55,8 @@ endif;
 /* --------------------------------------------------------------------------- */
 echo '<section '.$anchor.' class="'.$blockclass .'">
 	<div class="wcp-columns">
-		 <div class="wcp-column">'.$section_title.'</div>
-		 <div class="wcp-column">'.$linkrepeat.'</div>
-	</div>
+		 <div class="wcp-column full">'.$section_title.'</div>
+	</div>'.$linkrepeat.'
 </section>';
 ?>
 

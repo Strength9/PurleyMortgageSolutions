@@ -6,7 +6,23 @@
 	
 /* Links */
 
-
+section {
+	
+	@media only screen and (max-width:549px) {
+		margin:0 auto 0;
+		padding:0 0 50px;
+	}
+	
+	@media only screen and (min-width:550px) {
+		margin:0 auto 0;
+		padding:0 0 80px;
+	
+	}
+	@media only screen and (min-width:800px) {
+		margin:0 auto 0;
+		padding:0 0 130px;
+	}
+}
 
 
 

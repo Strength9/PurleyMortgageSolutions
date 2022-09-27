@@ -139,7 +139,7 @@ add_filter('image_size_names_choose', 'post_image_sizes');
 /*-----------------------------------------------------------------------------------*/
 	function xray_scripts()  { 
 		// get the theme directory style.css and link to it in the header
-		wp_enqueue_style('custom_font', '//use.typekit.net/rir5arn.css');
+		wp_enqueue_style('custom_font', '//use.typekit.net/zzp5rmc.css');
 		wp_enqueue_style('style.css', get_stylesheet_directory_uri() . '/style.css?v='.rand(111,999));
 		
 		wp_enqueue_script( 'jquery-core' );

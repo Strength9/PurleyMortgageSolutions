@@ -8,5 +8,12 @@
     @import '_page_structure/header';      
     @import '_page_structure/footer';  
    @import '_customs_partials/paritals'; // Global Designs
+   
+   @import '_customs_partials/herohead';
+   @import '_customs_partials/calltoaction';
 
-
+    @import '_customs_partials/textandimage';
+    @import '_customs_partials/textandlist';
+    @import '_customs_partials/quotes';
+    @import '_customs_partials/squarelinks';
+    @import '_customs_partials/steps';

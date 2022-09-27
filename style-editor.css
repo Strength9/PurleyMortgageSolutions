@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: PurleyMortgageSolutions
 Theme URI: https://strength9.co.uk
@@ -43,30 +44,35 @@ Tags: naked, bare, quick
 
 */
 /*
-@font-face {
-	font-family: 'Montserrat';
-	src: url('assets/fonts/Montserrat-Regular.eot'); src: url('assets/fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'), url('assets/fonts/Montserrat-Regular.woff2') format('woff2'), url('assets/fonts/Montserrat-Regular.woff') format('woff'), url('assets/fonts/Montserrat-Regular.ttf') format('truetype'), url('assets/fonts/Montserrat-Regular.svg#Montserrat-Regular') format('svg'); font-weight: normal; font-style: normal; font-display: swap;
-}
 
-@font-face {
-	font-family: 'Montserrat';
-	src: url('assets/fonts/Montserrat-Light.eot'); src: url('assets/fonts/Montserrat-Light.eot?#iefix') format('embedded-opentype'), url('assets/fonts/Montserrat-Light.woff2') format('woff2'), url('assets/fonts/Montserrat-Light.woff') format('woff'), url('assets/fonts/Montserrat-Light.ttf') format('truetype'), url('assets/fonts/Montserrat-Light.svg#Montserrat-Light') format('svg'); font-weight: 300; font-style: normal; font-display: swap;
-}
+Montserrat Regular
 
-@font-face {
-	font-family: 'Montserrat'; src: url('assets/fonts/Montserrat-Bold.eot'); src: url('assets/fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'), url('assets/fonts/Montserrat-Bold.woff2') format('woff2'), url('assets/fonts/Montserrat-Bold.woff') format('woff'), url('assets/fonts/Montserrat-Bold.ttf') format('truetype'), url('assets/fonts/Montserrat-Bold.svg#Montserrat-Bold') format('svg'); font-weight: bold; font-style: normal; font-display: swap;
-}
+font-family: montserrat, sans-serif;
+font-weight: 400;
+font-style: normal;
 
-@font-face {
-	font-family: 'Luna';
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-	src: url('assets/fonts/luna-webfont.woff2') format('woff2'),
-		url('assets/fonts/luna-webfont.woff') format('woff'),
-		url('assets/fonts/Luna.ttf') format('truetype');
-}
+
+Montserrat Italic
+
+font-family: montserrat, sans-serif;
+font-weight: 400;
+font-style: italic;
+
+
+Montserrat Bold
+
+font-family: montserrat, sans-serif;
+font-weight: 700;
+font-style: normal;
+
 */
+@font-face {
+  font-family: "Bookman Old Style";
+  src: url("/assets/fonts/BookmanOldStyle.woff2") format("woff2"), url("/assets/fonts/BookmanOldStyle.woff") format("woff"), url("/assets/fonts/BookmanOldStyle.ttf") format("truetype"), url("/assets/fonts/BookmanOldStyle.svg#BookmanOldStyle") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
 /*!
  * Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license (Commercial License)
@@ -408,14 +414,14 @@ body {
   margin: 0;
   padding: 0 0 0;
   overflow-x: hidden;
-  color: rgb(68, 68, 68);
+  color: #231f20;
   font-family: "Montserrat", sans-serif;
   font-weight: 200;
   font-style: normal;
   font-size: 15px;
   line-height: 18px;
   position: relative;
-  background-color: rgb(246, 242, 235);
+  background-color: rgb(255, 255, 255);
 }
 
 h1,
@@ -430,6 +436,9 @@ h1 {
   font-size: 50px;
   margin-bottom: 30px;
   line-height: 1;
+  font-family: montserrat, sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 @media screen and (min-width: 768px) {
   h1 {
@@ -449,10 +458,12 @@ h2 {
 }
 
 p {
-  font-size: 16px;
   line-height: 1.7;
   margin-bottom: 25px;
-  font-weight: 200;
+  font-family: montserrat, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .fade-in {
@@ -479,6 +490,54 @@ p {
   opacity: 1;
 }
 
+header {
+  display: none;
+}
+
+.thelegalstuff {
+  text-align: center;
+  background-color: #d1d3d4;
+}
+@media only screen and (max-width: 549px) {
+  .thelegalstuff {
+    margin: 0 auto 0;
+    padding: 50px 0 50px;
+  }
+}
+@media only screen and (min-width: 550px) {
+  .thelegalstuff {
+    margin: 0 auto 0;
+    padding: 80px 0 80px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .thelegalstuff {
+    margin: 0 auto 0;
+    padding: 130px 0 130px;
+  }
+}
+.thelegalstuff .wcp-column {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.thelegalstuff .wcp-column h1 {
+  font-family: "Bookman Old Style";
+  font-weight: 300;
+  font-style: normal;
+  padding: 30px 20px 30px;
+  font-size: 36px;
+  margin: 0 auto;
+}
+.thelegalstuff .wcp-column p {
+  font-size: 14px;
+  margin: 5px;
+  font-family: montserrat, sans-serif;
+  font-weight: 500;
+}
+.thelegalstuff .wcp-column p strong {
+  font-weight: 700;
+}
+
 .ps_left {
   text-align: left;
 }
@@ -493,6 +552,25 @@ p {
 }
 
 /* Links */
+@media only screen and (max-width: 549px) {
+  section {
+    margin: 0 auto 0;
+    padding: 0 0 50px;
+  }
+}
+@media only screen and (min-width: 550px) {
+  section {
+    margin: 0 auto 0;
+    padding: 0 0 80px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  section {
+    margin: 0 auto 0;
+    padding: 0 0 130px;
+  }
+}
+
 .wcp-columns {
   margin: 0 auto;
   max-width: 1320px;
@@ -599,6 +677,568 @@ p {
 }
 .wcp-columns .wcp-column.full {
   grid-column: 1/span 2;
+}
+
+.herohead {
+  text-align: center;
+  display: block;
+}
+.herohead .heroimage {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: green;
+  width: 100vw;
+  height: 300px;
+  position: relative;
+  margin: 0 0 50px;
+}
+.herohead .heroimage h1 {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100vw;
+  color: #FFF;
+  font-size: 30px;
+  padding-bottom: 50px;
+}
+.herohead .imagefooter {
+  display: block;
+  width: 90%;
+  max-width: 1320px;
+  margin: 50px auto 0px;
+  height: 400px;
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.herohead .imagefooter img {
+  width: 100%;
+}
+.herohead p {
+  font-family: montserrat, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  font-style: normal;
+  width: 95%;
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+.herohead p:last-child {
+  margin: 0 auto 0px;
+}
+@media only screen and (min-width: 550px) {
+  .herohead .heroimage {
+    width: 100vw;
+    height: 400px;
+    margin: 0 0 80px;
+  }
+  .herohead .heroimage h1 {
+    font-size: 50px;
+    padding-bottom: 50px;
+  }
+  .herohead p {
+    margin: 0 auto 30px;
+  }
+  .herohead p:last-child {
+    margin: 0 auto 0px;
+  }
+  .herohead .imagefooter {
+    margin: 50px auto 0px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .herohead .heroimage {
+    width: 100vw;
+    height: 500px;
+    margin: 0 0 130px;
+  }
+  .herohead .heroimage h1 {
+    font-size: 62px;
+    padding-bottom: 50px;
+  }
+  .herohead p {
+    margin: 0 auto 30px;
+  }
+  .herohead p:last-child {
+    margin: 0 auto 0px;
+  }
+  .herohead .imagefooter {
+    margin: 130px auto 0px;
+  }
+}
+
+.calltoaction {
+  background-color: #c52026;
+  color: #FFF;
+  font-family: "Bookman Old Style";
+  font-weight: 300;
+  font-style: normal;
+  padding: 30px 20px;
+}
+.calltoaction p {
+  font-family: "Bookman Old Style";
+  font-weight: 200;
+  font-style: normal;
+  font-size: 24px;
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.3;
+  letter-spacing: 2px;
+}
+.calltoaction a {
+  color: #FFF;
+  text-decoration: none;
+}
+.calltoaction a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+.calltoaction a.button {
+  font-family: montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  padding: 4px 24px;
+  margin: 30px auto 0;
+  letter-spacing: 2px;
+}
+.calltoaction a.button:hover {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #FFF;
+}
+.calltoaction.black {
+  background-color: #231f20;
+}
+.calltoaction.black .button {
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
+}
+.calltoaction.black .button:hover {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #FFF;
+}
+
+.textandimage {
+  background-color: #d1d3d4;
+}
+.textandimage .wtext {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+@media only screen and (max-width: 549px) {
+  .textandimage {
+    margin: 0 auto 0;
+    padding: 50px 0 50px;
+  }
+}
+@media only screen and (min-width: 550px) {
+  .textandimage {
+    margin: 0 auto 0;
+    padding: 80px 0 80px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .textandimage {
+    margin: 0 auto 0;
+    padding: 130px 0 130px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .textandimage.imtxt .wtext {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .textandimage.txtim .wtext {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+  }
+}
+
+@media only screen and (max-width: 549px) {
+  .textandlist {
+    margin: 0 auto 0;
+    padding: 50px 0 50px;
+  }
+}
+@media only screen and (min-width: 550px) {
+  .textandlist {
+    margin: 0 auto 0;
+    padding: 80px 0 80px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .textandlist {
+    margin: 0 auto 0;
+    padding: 130px 0 130px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .textandlist .wcp-columns {
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: minmax(10px auto);
+    gap: 0px 30px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .textandlist .wcp-columns {
+    grid-template-columns: 450px 1fr;
+    grid-template-rows: minmax(10px auto);
+    gap: 0px 30px;
+  }
+}
+.textandlist .txtintro {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: flex-end;
+  align-items: center;
+}
+.textandlist .txtintro h1 {
+  color: #c52026;
+  text-align: center;
+  font-family: "Bookman Old Style";
+  font-weight: 300;
+  font-style: normal;
+  font-size: 35px;
+  line-height: 1.3;
+  letter-spacing: 3px;
+  margin: 0;
+}
+@media only screen and (min-width: 400px) {
+  .textandlist .txtintro h1 {
+    font-size: 45px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .textandlist .txtintro h1 {
+    text-align: right;
+    font-size: 55px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .textandlist .txtintro {
+    align-items: flex-end;
+    text-align: right;
+  }
+}
+.textandlist .txtlist {
+  justify-content: flex-start;
+  align-content: flex-end;
+  align-items: flex-start;
+}
+.textandlist .txtlist li {
+  list-style: none;
+  margin: 10px 10px 10px 0;
+  font-size: 18px;
+  line-height: 1.2;
+  list-style-position: outside;
+}
+.textandlist .txtlist li:first-child {
+  margin-top: 0;
+}
+.textandlist .txtlist li:before {
+  display: inline-block;
+  content: "•";
+  margin-right: 10px;
+  color: #c52026;
+  font-size: 24px;
+  margin-left: -20px;
+}
+
+.quotesarea {
+  background-color: #231f20;
+}
+@media only screen and (max-width: 549px) {
+  .quotesarea {
+    margin: 0 auto 0;
+    padding: 50px 0 50px;
+  }
+}
+@media only screen and (min-width: 550px) {
+  .quotesarea {
+    margin: 0 auto 0;
+    padding: 80px 0 80px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .quotesarea {
+    margin: 0 auto 0;
+    padding: 130px 0 130px;
+  }
+}
+.quotesarea h1 {
+  color: #FFF;
+  font-family: "Bookman Old Style";
+  font-weight: 300;
+  font-style: normal;
+  font-size: 45px;
+  line-height: 1.3;
+  letter-spacing: 3px;
+  background-image: url("assets/img/svg/quote.svg");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  font-size: 20px;
+  padding: 23px 0px 0 38px;
+  margin-bottom: 50px;
+}
+@media only screen and (min-width: 550px) {
+  .quotesarea h1 {
+    font-size: 25px;
+    background-size: 70px 70px;
+    padding: 40px 0 30px 45px;
+    margin-bottom: 70px;
+  }
+}
+@media only screen and (min-width: 700px) {
+  .quotesarea h1 {
+    font-size: 35px;
+    background-size: 70px 70px;
+    padding: 40px 0 30px 45px;
+    margin-bottom: 110px;
+  }
+}
+@media only screen and (min-width: 840px) {
+  .quotesarea h1 {
+    font-size: 45px;
+    background-size: 90px 90px;
+    padding: 50px 50px 0;
+    margin-bottom: 120px;
+  }
+}
+.quotesarea .quotations {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+  gap: 40px 40px;
+  max-width: 400px;
+}
+@media only screen and (min-width: 670px) {
+  .quotesarea .quotations {
+    max-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 670px) {
+  .quotesarea .quotations {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .quotesarea .quotations {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.quotesarea .quotations .quotebox {
+  background-color: #FFF;
+  padding: 35px 25px 35px;
+}
+.quotesarea .quotations .quotebox .qby {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 549px) {
+  .squarelinks {
+    margin: 0 auto 0;
+    padding: 50px 0 50px;
+  }
+}
+@media only screen and (min-width: 550px) {
+  .squarelinks {
+    margin: 0 auto 0;
+    padding: 80px 0 80px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .squarelinks {
+    margin: 0 auto 0;
+    padding: 130px 0 130px;
+  }
+}
+.squarelinks .intro h1 {
+  margin: 0 auto 40px;
+  font-family: "Bookman Old Style";
+  font-weight: 300;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 1.3;
+  letter-spacing: 3px;
+  color: #c52026;
+  text-align: center;
+}
+.squarelinks .intro p {
+  text-align: center;
+}
+.squarelinks .squarelinkbox {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+  gap: 40px 40px;
+  max-width: 400px;
+  width: 100%;
+}
+@media only screen and (min-width: 670px) {
+  .squarelinks .squarelinkbox {
+    max-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 670px) {
+  .squarelinks .squarelinkbox {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .squarelinks .squarelinkbox {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.squarelinks .squarelinkbox .squarelink .image {
+  width: 100%;
+  background-color: green;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-bottom: 30px;
+}
+.squarelinks .squarelinkbox .squarelink .image:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+.squarelinks .squarelinkbox .squarelink a {
+  display: block;
+  color: #c52026;
+  margin: 20px 0;
+  text-decoration: none;
+}
+.squarelinks .squarelinkbox .squarelink a:hover {
+  color: #231f20;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 549px) {
+  .journeysteps {
+    margin: 0 auto 0;
+    padding: 50px 0 0px;
+  }
+}
+@media only screen and (min-width: 550px) {
+  .journeysteps {
+    margin: 0 auto 0;
+    padding: 80px 0 0px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .journeysteps {
+    margin: 0 auto 0;
+    padding: 130px 0 0px;
+  }
+}
+.journeysteps h1 {
+  margin: 0 auto 40px;
+  font-family: "Bookman Old Style";
+  font-weight: 300;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 1.3;
+  letter-spacing: 3px;
+  color: #c52026;
+  margin: 0 auto 0;
+  padding: 0px 0 50px;
+}
+@media only screen and (min-width: 550px) {
+  .journeysteps h1 {
+    margin: 0 auto 0;
+    padding: 0px 0 80px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .journeysteps h1 {
+    margin: 0 auto 0;
+    padding: 0px 0 90px;
+  }
+}
+.journeysteps .step {
+  width: 100%;
+  margin: 20px 0;
+  text-align: center;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.journeysteps .step .text {
+  max-width: 1100px;
+  margin: 0 auto;
+  color: #FFF;
+  font-size: 24px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.journeysteps .step .text h3 {
+  color: #FFF;
+  font-size: 65px;
+  line-height: 1;
+  text-align: center;
+  margin: 0 auto 30px;
+}
+.journeysteps .step .text p {
+  font-family: "Bookman Old Style" !important;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1.3;
+  letter-spacing: 2px;
+  margin: 0 30px;
+  padding: 0;
+}
+.journeysteps .step .overlay {
+  z-index: 0;
+  background-color: rgba(197, 32, 38, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.journeysteps .step .overlay.black {
+  background-color: rgba(35, 31, 32, 0.8);
+}
+@media only screen and (max-width: 549px) {
+  .journeysteps .step {
+    padding: 50px 0 50px;
+  }
+}
+@media only screen and (min-width: 550px) {
+  .journeysteps .step {
+    padding: 70px 0 70px;
+  }
 }
 
 .fade-in {

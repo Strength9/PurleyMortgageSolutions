@@ -80,7 +80,7 @@ body {
     margin: 0;
     padding: 0 0 0;
     overflow-x: hidden; 
-    color: $Basecolor;
+    color: $pmsbase;
     font-family: 'Montserrat', sans-serif;
     font-weight: 200;
     font-style: normal;
@@ -102,6 +102,9 @@ h1 {
   font-size: 50px;
   margin-bottom: 30px;
   line-height: 1;
+  font-family: montserrat, sans-serif;
+  font-weight: 300;
+  font-style: normal;
 
   @media screen and (min-width: 768px) {
     font-size: 65px;
@@ -118,10 +121,13 @@ h2 {
 }
 p {
 
-font-size: 16px;
+
 line-height: 1.7;
 margin-bottom: 25px;
-font-weight: 200;
+    font-family: montserrat, sans-serif;
+font-size:15px;
+font-weight: 300;
+font-style: normal;
 }
 
 
