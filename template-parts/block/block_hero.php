@@ -33,7 +33,7 @@ if( !empty($imagefield= get_field('image_field')) ) {
 
 /* --------------------------------------------------------------------------- */
 echo '<section '.$anchor.' class="'.$blockclass .'">
-		<div class="heroimage" style="background-image:url('.$background_image.');">'.$title_text.'</div>
+		<div class="heroimage" style="background-image:url('.$background_image.');"><div class="overlay">'.$title_text.'</div></div>
 		 '.$introduction_text.$imagefd.'
 
 </section>';

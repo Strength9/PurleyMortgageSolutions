@@ -366,6 +366,52 @@ function remove_posts_menu()
 }
 
 
+/**
+	 * Font Awesome Kit Setup
+	 * 
+	 * This will add your Font Awesome Kit to the front-end, the admin back-end,
+	 * and the login screen area.
+	 */
+	if (! function_exists('fa_custom_setup_kit') ) {
+	  function fa_custom_setup_kit($kit_url = '') {
+		foreach ( [ 'wp_enqueue_scripts', 'admin_enqueue_scripts', 'login_enqueue_scripts' ] as $action ) {
+		  add_action(
+			$action,
+			function () use ( $kit_url ) {
+			  wp_enqueue_script( 'font-awesome-kit', $kit_url, [], null );
+			}
+		  );
+		}
+	  }
+	}
+fa_custom_setup_kit('https://kit.fontawesome.com/f03a84417a.js');		
+
+/**
+	 * Google Fonts
+	 
+function wpb_add_google_fonts() {
+	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600', false ); 
+}
+ 
+add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
+*/
+
+/**
+	 * Favicons
+	 */
+add_action( 'wp_head', 'ilc_favicon');
+function ilc_favicon(){
+	echo '<link rel="apple-touch-icon" sizes="180x180" href="/wp-content/themes/PurleyMortgageSolutions/assets/img/fav/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/wp-content/themes/PurleyMortgageSolutions/assets/img/fav/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/wp-content/themes/PurleyMortgageSolutions/assets/img/fav/favicon-16x16.png">
+	<link rel="manifest" href="/wp-content/themes/PurleyMortgageSolutions/assets/img/fav/site.webmanifest">
+	<link rel="mask-icon" href="/wp-content/themes/PurleyMortgageSolutions/assets/img/fav/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="/wp-content/themes/PurleyMortgageSolutions/assets/img/fav/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="/wp-content/themes/PurleyMortgageSolutions/assets/img/fav/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">';
+}
+
 
 
 

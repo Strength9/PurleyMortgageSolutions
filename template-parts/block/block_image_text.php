@@ -15,6 +15,8 @@ if( !empty( $block['data']['_is_preview'] ) ) {
 /* --------------------------------------------------------------------------- */
 include('______partials_global.php');
 
+
+$bg  = ! empty( get_field('background_colour') ) ? get_field('background_colour') : 'white';
 $orderfield = ! empty( get_field('orderfield') ) ? get_field('orderfield') : 'imagetext';
 
 $glob_imageclass = 'centicon';
@@ -38,7 +40,7 @@ if ($orderfield === 'imagetext') {
 	 $display = $text_information.$image_output;
  }
 
-echo '<section '.$anchor.' class="'.$blockclass .'">
+echo '<section '.$anchor.' class="'.$blockclass .' '.$bg.'">
 	<div class="wcp-columns">
 	 	'.$display.'
 	</div>

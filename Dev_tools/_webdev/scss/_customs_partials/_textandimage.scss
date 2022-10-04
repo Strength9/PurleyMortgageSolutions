@@ -1,5 +1,8 @@
 .textandimage {
+	
+	&.grey {
 	background-color:$pmsgrey;
+}
 	
 	.wtext {
 		display: flex;
@@ -9,6 +12,86 @@
 		align-content: center;
 		align-items: center;
 		text-align:center;
+		
+		h2 {
+			font-family: montserrat, sans-serif;
+			font-size:26px;
+			font-weight: 300;
+			font-style: normal;
+			width:95%;
+			color:$pmsred;
+			margin:20px;
+		}
+		
+		ul {
+			padding:0;
+			margin:20px 20px 0;
+			li {
+				   list-style:none;
+					
+				   margin:0px 0 10px;
+				   font-family: montserrat, sans-serif;
+				   font-size: 16px;
+				   font-weight: 300;
+				   font-style: normal;
+				   line-height: 1.3;
+				   list-style-position: outside;
+					
+					&:first-child {
+						margin-top:0;
+					}
+				   
+					
+					strong {
+						font-weight:400 !important;
+						color:$pmsred;
+					}
+					
+					@media only screen and (min-width:800px) {
+						margin-left:20px;
+						
+						&:before {
+							display:inline-block;
+							content: "•";
+							margin-right:10px;
+							color:$pmsred;
+							font-size:24px;
+							margin-left:-20px;
+							
+						}
+					
+					}
+					
+			   }
+		}
+		
+		p{
+			font-family: montserrat, sans-serif;
+			font-size:16px;
+			font-weight: 300;
+			font-style: normal;
+			width:95%;
+			max-width:800px;
+			margin:0 auto 30px;
+			
+			&:last-child{
+				margin:0 auto 0px;
+			}
+			
+			strong {
+				font-weight:400 !important;
+			}
+		
+		}
+	}
+	
+	.wimage {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-content: stretch;
+		align-items: center;
 	}
 	
 	@media only screen and (max-width:549px) {
@@ -52,7 +135,7 @@
 				justify-content: center;
 				align-content: flex-end;
 				align-items: flex-end;
-				text-align:right;
+				text-align:left;
 			}
 		}
 	}

@@ -76,12 +76,14 @@
 			 }
 			
 			 &:before {
-				 display:inline-block;
+				 display: block;
+				 float:left;
 				 content: "•";
 				 margin-right:10px;
 				 color:$pmsred;
 				 font-size:24px;
 				 margin-left:-20px;
+				 margin-top:-5px;
 				 
 			 }
 			

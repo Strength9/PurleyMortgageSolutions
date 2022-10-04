@@ -72,16 +72,35 @@
 				 }
 			 }
 			 
+			 h2 {
+				 color:$pmsred;
+				 font-family: montserrat, sans-serif;
+					font-size: 22px;
+					font-weight: 300;
+					font-style: normal;
+					line-height: 1.3;
+			 }
 			 a {
-				 display:block;
-			 	color:$pmsred;
-				 margin:20px 0;
-				 text-decoration:none;
-				 
-				 &:hover {
-					 color:$pmsbase;
-					 text-decoration:underline;
-				 }
+				 float:right;
+				display:inline-block;
+				font-family: montserrat, sans-serif;
+				font-size:14px;
+				font-weight: 300;
+				font-style: normal;
+				text-transform:uppercase;
+				text-decoration: none;
+				border:1px solid $pmsred;
+				padding:4px 24px;
+				margin:0px 0 0 auto;
+				letter-spacing: 2px;
+				color:$pmsred;
+				text-align:left;
+				
+				&:hover {
+					border:1px solid $pmsred;
+					background-color:$pmsred;
+					color:#FFF;
+				}
 			 }
 		 }
 		 

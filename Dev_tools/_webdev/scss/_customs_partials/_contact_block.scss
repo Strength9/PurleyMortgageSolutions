@@ -1,0 +1,274 @@
+.contactblock {
+	background-color:#000;
+	padding-bottom:0;
+	
+	.wcp-columns {
+		max-width:1000px;
+	}
+	
+	
+	.contact {
+		width:100%;
+		margin:100px 0;
+		.details {  
+			margin-bottom:40px;
+			display: grid;
+		  grid-template-columns: 1fr ;
+		  grid-template-rows: repeat(2,minmax(10px,auto));
+		  gap: 0px 50px;
+		  grid-auto-flow: row;
+		  grid-template-areas: ". " ".";
+			
+			color:#FFF;
+			a {color:#FFF;}
+			
+			
+			.intro {
+				display: flex;
+				flex-direction: column;
+				flex-wrap: nowrap;
+				justify-content: center;
+				align-content: stretch;
+				align-items: center;
+				
+				text-align:center;
+				font-size: 16px;
+				
+				p{ font-size: 16px;}
+			}
+			
+			address {
+				text-align:center;
+				font-style:normal;
+				line-height: 1.7;
+				margin-bottom: 25px;
+				font-family: montserrat, sans-serif;
+				font-size: 16px;
+				font-weight: 300;
+				font-style: normal;
+				
+				a {
+					text-decoration:none;
+					
+					&:hover { 
+						color:$pmsred;
+					}
+				}
+			}
+			
+			
+			@media only screen and (min-width:580px) {
+				grid-template-columns: 1fr 1fr;
+				  grid-template-rows: 1fr;
+				  grid-template-areas: ". .";
+				  
+				  .intro {
+					  display: flex;
+					  flex-direction: column;
+					  flex-wrap: nowrap;
+					  justify-content: center;
+					  align-content: stretch;
+					  align-items: flex-start;
+					  max-width:300px;
+					  text-align:left;
+					  font-size: 16px;
+				  }
+				  address {
+					  text-align:right;
+					  font-style:normal;
+					  line-height: 1.7;
+					  margin-bottom: 25px;
+					  font-family: montserrat, sans-serif;
+					  font-size: 16px;
+					  font-weight: 300;
+					  font-style: normal;
+				  }
+				
+			}
+		}
+		
+		.formgrid {
+			.wpforms-container {
+				.wpforms-field-container {
+					 display: grid;
+					 gap: 20px 20px;
+					   grid-auto-flow: row;
+					  grid-template-columns: 1fr;
+					  grid-template-rows: repeat(7,minmax(10px,auto));
+					
+					  grid-template-areas:
+						"wpforms-353-field_1-container" 
+						"wpforms-353-field_2-container" 
+						"wpforms-353-field_3-container"
+						"wpforms-353-field_7-container"
+						"wpforms-353-field_8-container" 
+						"wpforms-353-field_9-container"
+						"wpforms-353-field_10-container";
+
+						
+
+
+						@media only screen and (min-width:800px) {
+							grid-template-columns: 1fr 1fr 1fr;
+						    grid-template-rows: repeat(3,minmax(10px,auto));
+						
+						  	grid-template-areas:
+							"wpforms-353-field_1-container wpforms-353-field_2-container wpforms-353-field_3-container"
+							"wpforms-353-field_7-container wpforms-353-field_8-container wpforms-353-field_9-container"
+							"wpforms-353-field_10-container wpforms-353-field_10-container wpforms-353-field_10-container";
+
+						}
+
+
+
+						label {
+							display:none; 
+							font-weight:normal;
+						}
+
+						#wpforms-353-field_1-container { grid-area: wpforms-353-field_1-container; padding:0 !important;}
+						#wpforms-353-field_2-container { grid-area: wpforms-353-field_2-container; padding:0 !important;}
+						#wpforms-353-field_3-container { grid-area: wpforms-353-field_3-container; padding:0 !important;}
+						#wpforms-353-field_7-container { 
+							grid-area: wpforms-353-field_7-container;
+						 }
+						#wpforms-353-field_8-container { 
+							grid-area: wpforms-353-field_8-container; 
+						}
+						#wpforms-353-field_9-container { 
+							grid-area: wpforms-353-field_9-container; 
+							
+						}
+						
+						
+						#wpforms-353-field_7-container, #wpforms-353-field_8-container, #wpforms-353-field_9-container {
+							background-color:#FFF;
+							
+							li label {
+								display:inline-block;
+								color: $pmsred;
+								font-weight: 400;
+								float:left;
+								margin : 0px 10px;
+							}
+							
+							input[type="checkbox"] {
+									float:right;
+									appearance: none;
+									background-color: $pmsred;
+									margin: 0;
+									font: inherit;
+									color: $pmsred;
+									width: 20px;
+									height: 20px;
+									border: 1px solid $pmsred;;
+									border-radius: 0.15em;
+									transform: translateY(-0.075em);
+									margin : 3px 10px 0;
+									display: grid;
+									place-content: center;
+							}
+									
+							input[type="checkbox"]::before {
+								content: "";
+								width: 8px;
+								height: 8px;
+								transform: scale(0);
+								transition: 120ms transform ease-in-out;
+								box-shadow: inset 1em 1em #FFF
+							}
+							input[type="checkbox"]:checked::before {
+								transform: scale(1);
+							}
+							
+						}
+		
+						#wpforms-353-field_10-container { 
+							grid-area: wpforms-353-field_10-container;  
+							padding:0 !important;}
+
+
+						color:#FFF;
+						a {color:#FFF;}
+						
+
+						
+						::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+						  color: $pmsred;
+						  font-weight: 400;
+						}
+						::-moz-placeholder { /* Firefox 19+ */
+						  color: $pmsred;
+						  font-weight: 400;
+						}
+						:-ms-input-placeholder { /* IE 10+ */
+						  color: $pmsred;
+						  font-weight: 400;
+						}
+						:-moz-placeholder { /* Firefox 18- */
+						  color: $pmsred;
+						  font-weight: 400;
+						}
+				}
+				.wpforms-submit-container { 
+					margin-top:10px;
+					#wpforms-submit-353 {
+						width:100% ;
+						 background-color: rgba(255,255,255,0);
+						 border: 1px solid rgba(255,255,255,0.9);
+						 color: rgba(255,255,255,0.9);
+						 font-size: 1em;
+						 padding: 10px 15px;
+						 
+						 &:hover {
+							 border: 1px solid $pmsred;
+							 background-color:$pmsred;
+							  color: rgba(255,255,255,0.9);
+						 }
+					 }
+				}
+			}
+			
+			.wpforms-confirmation-container-full {
+				padding:60px 0;
+				background-color:rgba(255,255,255,0);
+				border:0px;
+				text-align:center;
+				color:#FFF;
+				line-height: 1.7;
+				  margin-bottom: 25px;
+				  font-family: montserrat, sans-serif;
+				  font-size: 15px;
+				  font-weight: 300;
+				  font-style: normal;
+				  
+				  h2 {
+					  text-transform:uppercase;
+					  font-family: montserrat, sans-serif;
+					  color:$pmsred;
+				  }
+			}
+		}
+
+	}
+	
+	.mapouter {
+		width:100%;
+		margin:0;
+		padding:0;
+		
+		.gmap_canvas {
+			width:100%;
+			margin:0;
+			padding:0;
+			overflow:hidden;
+			height:500px;
+			iframe {
+				width:100%;
+				height:500px;
+				margin:0;
+				padding:0;
+			}
+		}
+	}
+}

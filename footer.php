@@ -30,16 +30,20 @@ if( !empty($imagefield = get_field('logo','options')) ) {
 	$logofoot = '';
 };
 
-/* --------------------------------------------------------------------------- */
-echo '
 
-<section class="thelegalstuff"><div class="wcp-columns"><div class="wcp-column full"><h1>'.$legal_title .'</h1>'.$legal_text.'</div></div></section>
+$facebook = ! empty( get_field('facebook','options') ) ? '<li><a href="'.get_field('facebook','options').'" title=""><i class="fa-brands fa-facebook-f"></i></a></li>' : '';
+$twitter = ! empty( get_field('twitter','options') ) ? '<li><a href="'.get_field('twitter','options').'" title=""><i class="fa-brands fa-twitter"></i></a></li>' : '';
+$linkedin= ! empty( get_field('linkedin','options') ) ? '<li><a href="'.get_field('linkedin','options').'" title=""><i class="fa-brands fa-linkedin-in"></i></a></li>' : '';
+$instagram = ! empty( get_field('instagram','options') ) ? '<li><a href="'.get_field('instagram','options').'" title=""><i class="fa-brands fa-instagram"></i></a></li>' : '';
+
+/* --------------------------------------------------------------------------- */
+echo '<section class="thelegalstuff"><div class="wcp-columns"><div class="wcp-column full"><h1>'.$legal_title .'</h1>'.$legal_text.'</div></div></section>
 <section class="calltoaction '.$footcallbackgroundcolor.'">
 	<div class="wcp-columns"><div class="wcp-column full">'.$calltext.$calltoaction.'</div>
 	</div></section>';?>
 <footer>
 	<div class="wcp-columns">
-		 <div class="wcp-column">
+		 <div class="wcp-column logofield">
 		<?php echo $logofoot;?>
 		 </div>
 		 <div class="wcp-column">
@@ -50,16 +54,18 @@ echo '
 		   </div>
 	</div>
 </footer>
+
 <div class="copyright">
-	<ul class="copyright">
-		<li>Copyright <?php echo Date("Y");?>. All rights reserved</li>
-		<li>Site designed by NJGraphique</li>
-	</ul>
-	<ul class="socialmedia">
-		<li>F</li>
-			<li>LI</li>
-		<li>T</li>
-	</ul>
+	<div class="bar">
+		<ul class="copyrightlist">
+			<li>Copyright <?php echo Date("Y");?>. All rights reserved.</li>
+			<li>Site designed by NJGraphique</li>
+		</ul>
+		<ul class="socialmedia">
+			<?php echo $facebook.$twitter.$linkedin.$instagram;?>
+		</ul>
+	</div>
+</div>
 
 <?php wp_footer(); ?>
 
