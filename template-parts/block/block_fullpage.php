@@ -20,7 +20,7 @@ $fullpage = ! empty( get_field('fullpage') ) ? get_field('fullpage') : '';
 /* --------------------------------------------------------------------------- */
 echo '<section '.$anchor.' class="'.$blockclass .'">
 	<div class="wcp-columns">
-	 	<div class="wcp-column full">'.$fullpage.'</div>
+		 <div class="wcp-column full">'.$fullpage.'</div>
 	</div>
 </section>';
 ?>

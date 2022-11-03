@@ -2409,6 +2409,61 @@ footer .wcp-columns ul li a:hover {
   padding: 0;
 }
 
+@media only screen and (max-width: 549px) {
+  .fptblock {
+    margin: 0 auto 0;
+    padding: 50px 0 50px;
+  }
+}
+@media only screen and (min-width: 550px) {
+  .fptblock {
+    margin: 0 auto 0;
+    padding: 80px 0 80px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .fptblock {
+    margin: 0 auto 0;
+    padding: 130px 0 130px;
+  }
+}
+.fptblock h1 {
+  margin-left: 0;
+  margin-right: auto;
+}
+.fptblock p {
+  text-align: left !important;
+  margin-left: 0;
+  margin-right: auto;
+}
+.fptblock p:first-child {
+  text-align: left !important;
+}
+.fptblock h2 {
+  text-align: left !important;
+  font-size: 24px;
+  margin: 0 auto 19px 0;
+  line-height: 1;
+  color: #c52026;
+  font-family: "Bookman Old Style";
+  font-weight: 300;
+  font-style: normal;
+}
+@media (min-width: 360px) {
+  .fptblock h2 {
+    text-align: left !important;
+    font-size: 22px;
+  }
+}
+.fptblock ul li {
+  line-height: 1.7;
+  margin-bottom: 10px;
+  font-family: montserrat, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  font-style: normal;
+}
+
 .fade-in {
   opacity: 0;
   transform: translateY(100px);
