@@ -460,8 +460,8 @@ select {
     scroll-behavior: auto;
   }
   *,
-*::before,
-*::after {
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -2430,6 +2430,8 @@ footer .wcp-columns ul li a:hover {
 .fptblock h1 {
   margin-left: 0;
   margin-right: auto;
+  font-family: Bookman Old Style;
+  font-size: 32px;
 }
 .fptblock p {
   text-align: left !important;
