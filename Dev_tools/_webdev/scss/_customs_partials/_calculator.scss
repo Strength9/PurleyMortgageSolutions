@@ -1,33 +1,30 @@
 
 section.calc {
   min-height:50px;
+  height:auto;
   text-align:center;
   background-color:#FFF;
   width:100%;
   color:$pmsred;
-  margin:60px auto 50px;
+  
 
   >div {  
-	  margin:auto;
-	width:90%;
+	width:95%;
 	max-width:1200px;
-	padding: 0px 0 0px!important;
+	margin:0px auto 50px!important;
 	display: grid; 
 	grid-template-columns: 1fr; 
-	grid-template-rows: minmax(10px,auto) minmax(10px,auto); 
+	
 	gap: 30px 0px; 
-	grid-template-areas:  "calcbox" "resultsbox "; 
+	grid-template-areas:  "calcbox" "resultsbox " "disc"; 
 
 	@media only screen and (min-width: 800px) {
 	  width:783px;
 	  margin:auto;
 	  grid-template-columns: 1fr 343px; 
-	  grid-template-rows: 1fr; 
+	  grid-template-rows: minmax(10px, auto) minmax(10px, auto); 
 	  gap: 0px 20px; 
-	  grid-template-areas:  "calcbox resultsbox "; 
-
-
-
+	  grid-template-areas:  "calcbox resultsbox " "disc disc"; 
 
   }
 
@@ -38,30 +35,16 @@ section.calc {
 		  border:2px solid $Basecolor;
 			padding:20px;
 
-	  
 		  > div {
 			width:100%;
 			margin:auto;
 			
 			display: grid;
-			grid-template-columns: 1fr; 
-			grid-template-rows: repeat(minmax(10px,auto),6);
-			gap: 00px 0px;
-			grid-auto-flow: row;
-			grid-template-areas:
-			  "title_res "
-			  "propertyvalue"
-			  "morreq_res"
-			  "tint_res"
-			  "loan_res "
-			  "mpay_res ";
+			grid-template-columns: 1fr;
+			
+			gap: 0px;
 
-					.title_res{  grid-area: title_res;  }
-					.propertyvalue{ grid-area: propertyvalue; }
-					.morreq_res{ grid-area: morreq_res; }
-					.title_res{ grid-area: title_res; }
-					.loan_res{ grid-area: loan_res; }
-					.mpay_res{ grid-area: mpay_res; }
+				
 
 					h2 { width:100%; 
 						text-transform:uppercase;
@@ -73,9 +56,9 @@ section.calc {
 						color: #c52026;
 					}
 					p {
-						margin-top:5px;   
+						margin:5px auto 5px;   
 						font-family: montserrat, sans-serif;
-						
+						line-height:40px;
 						font-style: normal;
 						font-display: swap;
 						  span { font-family: montserrat, sans-serif !important;
@@ -84,20 +67,9 @@ section.calc {
 						  }
 					}
 
-					height:360px;
+					
 
-					@media only screen and (min-width: 800px) {
-					  height:390px;
-					  grid-template-areas:
-					  "title_res "
-					  "propertyvalue"
-					  "morreq_res"
-					  "tint_res"
-					  "loan_res "
-					  "mpay_res " 
-					  "." ".";
-					}
-
+					
 
 		  }
 	  
@@ -113,7 +85,7 @@ section.calc {
 				
 				display: grid;
 				grid-template-columns: 1fr;
-				grid-template-rows: repeat(minmax(10px,auto),5);
+				grid-template-rows:  repeat(minmax(10px,30px),7);
 				gap: 5px 0px;
 				grid-auto-flow: row;
 				grid-template-areas:
@@ -205,5 +177,14 @@ section.calc {
 
   }
 
+.disclaimertext {
+	grid-area: disc; 
+	width:100%; 
+	background-color:red;
+	
+	p {
+		padding:30px 0;
+	}
+}
 }
 

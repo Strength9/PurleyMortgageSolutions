@@ -17,6 +17,9 @@ include('______partials_global.php');
 
 $fullpage = ! empty( get_field('fullpage') ) ? get_field('fullpage') : '';
 
+
+$disclaimer_text = ! empty( get_field('disclaimer_text') ) ? '<div class="disclaimertext">'.get_field('disclaimer_text').'</div>' : '';
+
 /* --------------------------------------------------------------------------- */
 echo '<section '.$anchor.' class="'.$blockclass .'">
 
@@ -27,7 +30,7 @@ echo '<section '.$anchor.' class="'.$blockclass .'">
 				<form id="calculate-loan" method="post" action="">
 					<div class="title_calc"><h2>Your Mortgage Details...</h2></div>
 					<div class="ir"><p>Interest Rate: <span id="myinterest_result"></span></p></div>
-					<div class="ir_slider"><input type="range" min="1" max="20.5" value="1" step="0.5"class="slider" name="myinterest" id="myinterest"></div>
+					<div class="ir_slider"><input type="range" min="1" max="15.5" value="1" step="0.5"class="slider" name="myinterest" id="myinterest"></div>
 					<div class="noy"><p>No of Years: <span id="myyears_result"></span></p></div>
 					<div class="noy_slider"><input type="range" min="1" max="50" value="1" step="1"class="slider" name="myyears" id="myyears"></div>
 					<div class="propval"><p>Property Value: <span id="mypropertyprice_result"></span></p></div>
@@ -44,8 +47,10 @@ echo '<section '.$anchor.' class="'.$blockclass .'">
 				  <div class="tint_res"><p>Total Interest: <span id="totalinterest_result"></span></p></div>
 				  <div class="loan_res"><p>Loan Payments: <span id="loadpayment_result"></span></p></div>
 				  <div class="mpay_res"><p>Monthly Payment: <span id="monthlyPayment_result"></span></p></div>
+				  <div class="stamp_res"><p>Estimated Stamp Duty: <span id="stampduty_result">£0.00</span></p></div>
 			</div>
 		</div>
+		'.$disclaimer_text.'
 </div> 
 
 </section>
@@ -149,6 +154,8 @@ echo '<section '.$anchor.' class="'.$blockclass .'">
 					  txt_loadpayment_result.innerHTML = currency +((monthly_payment * noofmonths).toFixed(2) + "").replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
 					  txt_monthlyPayment_result.innerHTML = currency +(monthly_payment.toFixed(2) + "").replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
 					  txt_totalinterest_result.innerHTML = currency +((monthly_payment * noofmonths - balance).toFixed(2) + "").replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+					  
+					  stampdutycalculator(currency);
 				}
 				// Deposit Slider Change
 				mydepositslider.oninput = function() {
@@ -168,6 +175,34 @@ echo '<section '.$anchor.' class="'.$blockclass .'">
 					  txt_loadpayment_result.innerHTML = currency +((monthly_payment * noofmonths).toFixed(2) + "").replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
 					  txt_monthlyPayment_result.innerHTML = currency +(monthly_payment.toFixed(2) + "").replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
 					  txt_totalinterest_result.innerHTML = currency +((monthly_payment * noofmonths - balance).toFixed(2) + "").replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+				};
+				
+				function stampdutycalculator(currency) {
+					var totalpropertyvalue = document.getElementById("mypropertyprice").value;
+					var brackettotaltocalc   = 0;
+					var totaltx = 0;
+					
+					console.clear();
+					console.log("Property Value:"+totalpropertyvalue);
+					
+					if (totalpropertyvalue >= 1500000) {
+						brackettotaltocalc = ((totalpropertyvalue - 1500000 )* 0.12);
+						totaltx = brackettotaltocalc + 57500 + 15000 + 10000+ 8750;
+					};	
+					if ((totalpropertyvalue >= 925000) && (totalpropertyvalue < 1500000)){
+						brackettotaltocalc = ((totalpropertyvalue - 925000 )* 0.10);
+						totaltx = brackettotaltocalc + 15000 + 10000 + 8750;
+					};
+					if ((totalpropertyvalue >= 625000) && (totalpropertyvalue < 925000)){
+						brackettotaltocalc = ((totalpropertyvalue - 625000 )* 0.05);
+						totaltx = brackettotaltocalc + 10000 + 8750;
+					};
+					if ((totalpropertyvalue >= 425000) && (totalpropertyvalue < 625000)){
+						brackettotaltocalc = ((totalpropertyvalue - 425000 )* 0.05);
+						totaltx = brackettotaltocalc ;
+					};
+				
+					document.getElementById("stampduty_result").innerHTML = currency+(totaltx + "").replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
 				};
 
 		  </script>';
