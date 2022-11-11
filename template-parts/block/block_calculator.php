@@ -25,7 +25,20 @@ echo '<section '.$anchor.' class="'.$blockclass .'">
 
   <div> 
 
-
+  <div class="propertyintrotype">
+  	<div class="">
+	  <h2>Instructions</h2>
+	  <ol>
+	  <li><strong>1. </strong>Select "First Time Buyer" or "Additional Property".</li>
+	  <li><strong>2. </strong>Use the sliders to enter purchase price and deposit.</li>
+	  <li><strong>3. </strong>View Your Results.</li>
+	  <ol>
+	  </div>
+	  <fieldset id="group2">
+	  	<input type="radio" name="propcont" value="Single" checked><label>First Time Buyer</label>
+	  	<input type="radio" name="propcont" value="Multi"><label>Additional Property</label>
+	  </fieldset>
+  </div>
 		<div class="calcbox">
 				<form id="calculate-loan" method="post" action="">
 					<div class="title_calc"><h2>Your Mortgage Details...</h2></div>
@@ -58,6 +71,7 @@ echo '<section '.$anchor.' class="'.$blockclass .'">
 
 <script>
 				//Property Slider
+				var housetype = document.querySelector(\'input[name="gender"]\');
 				var priceslider = document.getElementById("mypropertyprice");
 				var priceoutput = document.getElementById("mypropertyprice_result");
 				var myyearsslider = document.getElementById("myyears");
@@ -72,6 +86,8 @@ echo '<section '.$anchor.' class="'.$blockclass .'">
 				var txt_loadpayment_result = document.getElementById("loadpayment_result");
 				var txt_monthlyPayment_result = document.getElementById("monthlyPayment_result");
 				var txt_totalinterest_result = document.getElementById("totalinterest_result");
+				
+				
 
 
 				var deppercentage = 0;
@@ -177,30 +193,71 @@ echo '<section '.$anchor.' class="'.$blockclass .'">
 					  txt_totalinterest_result.innerHTML = currency +((monthly_payment * noofmonths - balance).toFixed(2) + "").replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
 				};
 				
+				
+				jQuery(\'input[name="propcont"]\').on(\'click change\', function(e) {
+					
+					console.log(this.value);
+					stampdutycalculator(currency);
+				});
+				
+				
+				
 				function stampdutycalculator(currency) {
 					var totalpropertyvalue = document.getElementById("mypropertyprice").value;
 					var brackettotaltocalc   = 0;
 					var totaltx = 0;
 					
 					console.clear();
-					console.log("Property Value:"+totalpropertyvalue);
+				
+					
+					
+
+					cb = jQuery(\'input[name="propcont"]:checked\').val();
+					
+					
+					if (cb == "Single") {
+					
+						if (totalpropertyvalue >= 1500000) {
+							brackettotaltocalc = ((totalpropertyvalue - 1500000 )* 0.12);
+							totaltx = brackettotaltocalc + 57500 + 15000 + 10000+ 8750;
+						};	
+						if ((totalpropertyvalue >= 925000) && (totalpropertyvalue < 1500000)){
+							brackettotaltocalc = ((totalpropertyvalue - 925000 )* 0.1);
+							totaltx = brackettotaltocalc + 15000 + 10000 + 8750;
+						};
+						if ((totalpropertyvalue >= 625000) && (totalpropertyvalue < 925000)){
+							brackettotaltocalc = ((totalpropertyvalue - 625000 )* 0.05);
+							totaltx = brackettotaltocalc + 10000 + 8750;
+						};
+						if ((totalpropertyvalue >= 425000) && (totalpropertyvalue < 625000)){
+							brackettotaltocalc = ((totalpropertyvalue - 425000 )* 0.05);
+							totaltx = brackettotaltocalc ;
+						};
+						
+					} else {
+
 					
 					if (totalpropertyvalue >= 1500000) {
-						brackettotaltocalc = ((totalpropertyvalue - 1500000 )* 0.12);
-						totaltx = brackettotaltocalc + 57500 + 15000 + 10000+ 8750;
+						brackettotaltocalc = ((totalpropertyvalue - 1500000 )* 0.15);
+						totaltx = brackettotaltocalc + 74750 + 54000 + 7500;
 					};	
 					if ((totalpropertyvalue >= 925000) && (totalpropertyvalue < 1500000)){
-						brackettotaltocalc = ((totalpropertyvalue - 925000 )* 0.10);
-						totaltx = brackettotaltocalc + 15000 + 10000 + 8750;
+						brackettotaltocalc = ((totalpropertyvalue - 925000 )* 0.13);
+						totaltx = brackettotaltocalc + 54000 + 7500;
 					};
-					if ((totalpropertyvalue >= 625000) && (totalpropertyvalue < 925000)){
-						brackettotaltocalc = ((totalpropertyvalue - 625000 )* 0.05);
-						totaltx = brackettotaltocalc + 10000 + 8750;
+					if ((totalpropertyvalue >= 250000) && (totalpropertyvalue < 925000)){
+						brackettotaltocalc = ((totalpropertyvalue - 625000 )*0.08);
+						totaltx = brackettotaltocalc  + 7500;
 					};
-					if ((totalpropertyvalue >= 425000) && (totalpropertyvalue < 625000)){
-						brackettotaltocalc = ((totalpropertyvalue - 425000 )* 0.05);
+				
+					if ((totalpropertyvalue < 425000)){
+						brackettotaltocalc = (totalpropertyvalue * 0.03);
 						totaltx = brackettotaltocalc ;
 					};
+					
+				};
+					
+					
 				
 					document.getElementById("stampduty_result").innerHTML = currency+(totaltx + "").replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
 				};
