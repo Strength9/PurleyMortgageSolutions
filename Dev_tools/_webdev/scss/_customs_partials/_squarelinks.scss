@@ -30,7 +30,7 @@
 		  
 		  p {
 			  text-align:center;
-			  
+			  font-weight:$fontweight;
 		  }
 	 }
 	 
@@ -85,7 +85,7 @@
 				display:inline-block;
 				font-family: montserrat, sans-serif;
 				font-size:14px;
-				font-weight: 300;
+				font-weight:$fontweight;
 				font-style: normal;
 				text-transform:uppercase;
 				text-decoration: none;

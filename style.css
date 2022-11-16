@@ -536,7 +536,7 @@ header {
   grid-template-areas: "logoarea navblock";
 }
 header.fixed {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 header .left {
   grid-area: logoarea;
@@ -555,7 +555,7 @@ header .left img {
 header .right {
   padding: 30px 0 40px;
   text-align: right;
-  background: linear-gradient(270deg, rgb(255, 255, 255) 0%, rgba(2, 0, 36, 0) 87%);
+  background: linear-gradient(270deg, rgb(255, 255, 255) 0%, rgba(2, 0, 36, 0) 95%);
   grid-area: navblock;
 }
 header .right #drop {
@@ -1257,7 +1257,7 @@ footer .wcp-columns ul li a:hover {
 .herohead p {
   font-family: montserrat, sans-serif;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
   width: 95%;
   max-width: 860px;
@@ -1752,7 +1752,10 @@ footer .wcp-columns ul li a:hover {
 .textandlist .txtlist li {
   list-style: none;
   margin: 10px 10px 10px 0;
+  font-family: montserrat, sans-serif;
   font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
   line-height: 1.2;
   list-style-position: outside;
 }
@@ -1893,6 +1896,7 @@ footer .wcp-columns ul li a:hover {
 }
 .squarelinks .intro p {
   text-align: center;
+  font-weight: 400;
 }
 .squarelinks .squarelinkbox {
   display: grid;
@@ -1944,7 +1948,7 @@ footer .wcp-columns ul li a:hover {
   display: inline-block;
   font-family: montserrat, sans-serif;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
   text-transform: uppercase;
   text-decoration: none;
@@ -2127,7 +2131,7 @@ footer .wcp-columns ul li a:hover {
   color: #FFF;
   text-decoration: none;
   font-family: montserrat, sans-serif;
-  font-weight: 200;
+  font-weight: 400;
   font-style: normal;
 }
 .quicklinks .wcp-columns .wcp-column a .caption span:hover {
@@ -2202,7 +2206,7 @@ footer .wcp-columns ul li a:hover {
   margin-bottom: 25px;
   font-family: montserrat, sans-serif;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
 }
 .contactblock .contact .details address a {
@@ -2235,7 +2239,7 @@ footer .wcp-columns ul li a:hover {
     margin-bottom: 25px;
     font-family: montserrat, sans-serif;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 400;
     font-style: normal;
   }
 }
@@ -2350,6 +2354,7 @@ footer .wcp-columns ul li a:hover {
   color: rgba(255, 255, 255, 0.9);
   font-size: 1em;
   padding: 10px 15px;
+  font-weight: 400;
 }
 .contactblock .contact .formgrid .wpforms-container .wpforms-submit-container #wpforms-submit-353:hover {
   border: 1px solid #c52026;
@@ -2480,6 +2485,7 @@ section.calc > div {
 section.calc > div .propertyintrotype {
   grid-area: proptype;
   border: 0 !important;
+  margin-bottom: 30px;
 }
 section.calc > div .propertyintrotype fieldset {
   border: 0;
@@ -2489,10 +2495,13 @@ section.calc > div .propertyintrotype h2 {
   text-transform: uppercase;
   font-family: montserrat, sans-serif;
   font-size: 26px;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
 }
 section.calc > div .propertyintrotype ol {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0 20px;
   text-align: center;
 }
 section.calc > div .propertyintrotype ol li {
@@ -2500,12 +2509,14 @@ section.calc > div .propertyintrotype ol li {
   list-style: none;
   margin: 14px auto;
   text-align: center;
+  font-weight: 400;
 }
 section.calc > div .propertyintrotype ol li strong {
   color: #c52026;
 }
 section.calc > div .propertyintrotype label {
   color: #231f20;
+  font-weight: 400;
 }
 section.calc > div .resultsbox {
   grid-area: resultsbox;
@@ -2610,6 +2621,7 @@ section.calc > div .calcbox form p span {
   font-family: montserrat, sans-serif;
   font-weight: normal !important;
   font-style: normal !important;
+  font-weight: 400;
 }
 @media only screen and (min-width: 1200px) {
   section.calc > div .calcbox form p {

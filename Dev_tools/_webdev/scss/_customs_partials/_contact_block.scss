@@ -44,7 +44,7 @@
 				margin-bottom: 25px;
 				font-family: montserrat, sans-serif;
 				font-size: 16px;
-				font-weight: 300;
+				font-weight: $fontweight;
 				font-style: normal;
 				
 				a {
@@ -80,7 +80,7 @@
 					  margin-bottom: 25px;
 					  font-family: montserrat, sans-serif;
 					  font-size: 16px;
-					  font-weight: 300;
+					  font-weight: $fontweight;
 					  font-style: normal;
 				  }
 				
@@ -219,6 +219,7 @@
 						 color: rgba(255,255,255,0.9);
 						 font-size: 1em;
 						 padding: 10px 15px;
+						 font-weight: $fontweight;
 						 
 						 &:hover {
 							 border: 1px solid $pmsred;
