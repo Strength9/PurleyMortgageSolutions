@@ -19,11 +19,14 @@ include('______partials_global.php');
 
 $background_image = ! empty( get_field('hero_image') ) ? get_field('hero_image') : '';
 
+$herotext = ! empty( get_field('hero_text') ) ? '<h1>'. get_field('hero_text').'</h1>' : '';
+
+
 /* --------------------------------------------------------------------------- */
 echo '<section '.$anchor.' class="'.$blockclass .'" style="background-image:url('.$background_image.');">
 		<div class="heroimage" >
 			<div class="straps">
-				<h1>For better and stress<br>free living book a free<br>consultation today...</h1>
+				'.$herotext.'
 			</div>
 			<div class="quickjumps">
 				<ul class="list">
