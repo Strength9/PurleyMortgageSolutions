@@ -688,20 +688,25 @@ header .right .buttontop:hover {
     font-weight: 400;
   }
   header .right .navigation nav ul li:hover ul {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0);
     visibility: visible;
     opacity: 1;
     display: block;
-    padding: 10px 0;
+    padding: 40px 0 10px;
   }
   header .right .navigation nav ul li:hover ul li {
+    background-color: #c52026;
     display: block;
+    color: #FFF !important;
+  }
+  header .right .navigation nav ul li:hover ul li a {
+    color: #FFF !important;
   }
   header .right .navigation nav ul li:hover ul li:hover {
     background-color: #c52026;
   }
   header .right .navigation nav ul li:hover ul li:hover a {
-    color: #FFF;
+    color: rgba(255, 255, 255, 0.4) !important;
   }
 }
 
